@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JE Montpellier — Cassandre Lallemand</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="../style.css" />
+  
+  <style>
+    .page-header {
+      padding: var(--space-xl) 0 var(--space-m);
+      border-bottom: 1px solid var(--clr-rule);
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: var(--space-l);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--clr-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .back-link:hover {
+      color: var(--clr-bordeaux);
+    }
+    .project-meta {
+      font-size: 0.9rem;
+      color: var(--clr-muted);
+      margin-bottom: var(--space-m);
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .meta-tag {
+      background: var(--clr-beige);
+      padding: 0.2rem 0.8rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="page-header">
+    <div class="container">
+      <a href="../index.html" class="back-link">← Retour</a>
+      
+      <p class="section-eyebrow">Communication scientifique</p>
+      <h1>Anonymiser (Panel)Vico : défis et leçons</h1>
+      <p class="hero-tagline">
+        Retour réflexif sur le travail de pseudonymisation de données qualitatives dans le cadre d'une enquête longitudinale en méthodes mixtes.
+      </p>
+      
+      <div class="project-meta">
+        <span class="meta-tag">11 Mai 2026 — Montpellier</span>
+        <span class="meta-tag">Journée d'étude · "Anonymiser, Pseudonymiser ?"</span>
+        <span class="meta-tag">Avec Laurine Thizy et Lucas Borquez</span>
+      </div>
+    </div>
+  </header>
+
+  <section id="contexte" style="border-top: none; padding-top: var(--space-m);">
+    <div class="container">
+      <h2>Le contexte : le projet PanelVico</h2>
+      <p style="text-align: justify; margin-bottom: 1.5rem;">
+        Le programme ANR PanelVico (2023-2027) documente l'ampleur des changements causés par la crise sanitaire sur le lien social, le travail et le temps libre. Il s'agit d'un vaste panel recruté au printemps 2020, cumulant 6 vagues de questionnaires et 9 vagues d'entretiens.
+      </p>
+      
+      <div class="thesis-card">
+        <h3>L'impératif de la Science Ouverte</h3>
+        <p style="text-align: justify;">
+          Dès sa conception, le projet prévoyait une politique d'ouverture rapide des données produites (dépôt auprès du CDSP de Sciences Po et de Quetelet Progedo Diffusion). Cet impératif a soulevé un défi méthodologique majeur : comment préparer et pseudonymiser un corpus qualitatif massif pour permettre son réusage tout en protégeant les enquêtés ?
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="protocole">
+    <div class="container">
+      <p class="section-eyebrow">Traitement des données</p>
+      <h2>Le protocole de pseudonymisation</h2>
+      <p style="text-align: justify; margin-bottom: 2rem;">
+        Face à l'impossibilité d'une anonymisation stricte (qui détruirait la substance même des entretiens), nous avons élaboré un protocole de pseudonymisation au cas par cas, visant à préserver la cohérence interne de l'énonciation et l'appariement avec les données quantitatives, tout en limitant les risques d'identification.
+      </p>
+      
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>Les prénoms : la substitution</h3>
+          <p style="font-size: 0.9rem; margin-top: 0.5rem; text-align: justify;">
+            Utilisation de l'outil de Baptiste Coulmont croisé avec les statistiques de l'INSEE pour remplacer les prénoms tout en conservant la fréquence et la symbolique sociale liée à l'année de naissance.
+          </p>
+        </div>
+
+        <div class="skill-group">
+          <h3>Les lieux & entreprises : l'hyperonymie</h3>
+          <p style="font-size: 0.9rem; margin-top: 0.5rem; text-align: justify;">
+            Remplacement par des catégories sociologiques. Par exemple, une ville est classée selon sa taille (ex: "ville moyenne de France" pour 20k-200k habitants). Les lieux de vacances lointains sont ramenés à leur région (ex: "pays d'Afrique subsaharienne").
+          </p>
+        </div>
+
+        <div class="skill-group">
+          <h3>La santé : le seuil de prévalence</h3>
+          <p style="font-size: 0.9rem; margin-top: 0.5rem; text-align: justify;">
+            Nous n'anonymisons pas les pathologies courantes (concernant au moins 5 à 10% de la population, comme l'asthme ou le Covid). En revanche, les maladies rares ou handicaps très spécifiques sont hyperonymisés (ex: "Sclérose en plaques" devient "maladie auto-immune").
+          </p>
+        </div>
+
+        <div class="skill-group">
+          <h3>L'appariement Quanti/Quali</h3>
+          <p style="font-size: 0.9rem; margin-top: 0.5rem; text-align: justify;">
+            Pour les proches cités (campagne RELATIONS), les identifiants quantitatifs (alters) sont réintroduits dans le corpus qualitatif puis pseudonymisés, afin de faciliter la lecture tout en gardant le pont entre les bases de données.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="defis">
+    <div class="container">
+      <p class="section-eyebrow">Réflexivité</p>
+      <h2>Défis éthiques, logistiques et techniques</h2>
+      
+      <ul class="timeline" style="margin-top: var(--space-m);">
+        
+        <li class="tl-item">
+          <span class="tl-date">Le coût</span>
+          <div class="tl-body">
+            <p class="tl-title">Le travail invisible des données</p>
+            <p class="tl-sub" style="text-align: justify; margin-top: 0.3rem;">
+              La préparation d'un tel corpus a un coût humain considérable : environ 150 000€, incluant 22 mois ETP de stages, 30 mois de post-doctorat, et une lourde coordination entre équipes (Pacte, CDSP, CNRS). C'est un processus soumis à de forts "turn overs" contractuels qui obligent à former continuellement les équipes aux normes RGPD.
+            </p>
+          </div>
+        </li>
+
+        <li class="tl-item">
+          <span class="tl-date">L'éthique</span>
+          <div class="tl-body">
+            <p class="tl-title">Consentement et confiance</p>
+            <p class="tl-sub" style="text-align: justify; margin-top: 0.3rem;">
+              Bien que l'intérêt public du projet autorise le traitement, un consentement spécifique pour l'ouverture des données a été ajouté rétroactivement. Conserver ces consentements pose un paradoxe : cela nécessite de garder une table de correspondance désanonymisante, indispensable en cas de litige, mais risquée pour la protection de l'intimité, souvent négociée en direct lors des entretiens.
+            </p>
+          </div>
+        </li>
+
+        <li class="tl-item">
+          <span class="tl-date">Le risque</span>
+          <div class="tl-body">
+            <p class="tl-title">La réidentification à l'ère de l'IA</p>
+            <p class="tl-sub" style="text-align: justify; margin-top: 0.3rem;">
+              Pour éprouver notre protocole, nous avons soumis un entretien (celui d'un enquêté "personne publique") entièrement pseudonymisé à l'IA Claude. Malgré nos efforts d'hyperonymie, l'IA a réussi à "craquer" l'identité de la personne en contournant les simples barrières éthiques. Cela souligne que l'anonymisation est un continuum précaire face aux nouvelles technologies.
+            </p>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      Cassandre Lallemand · Doctorante en sociologie
+    </div>
+  </footer>
+
+</body>
+</html>
