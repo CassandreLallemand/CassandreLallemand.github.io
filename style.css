@@ -50,20 +50,30 @@ nav {
 }
 
 nav .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: var(--space-s);
-    padding-bottom: var(--space-s);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* Augmentation du padding vertical pour créer plus d'espace */
+  padding-top: var(--space-m); 
+  padding-bottom: var(--space-m); 
 }
 
 .nav-name {
-    font-family: var(--ff-display);
-    font-weight: 400;
-    font-size: 1rem;
-    letter-spacing: 0.08em;
-    color: var(--clr-bordeaux);
-    text-decoration: none;
+  /* Suppression des styles textuels */
+  font-family: none; 
+  font-size: 0; /* Important : annule le font-size du texte */
+  letter-spacing: 0;
+  color: transparent; /* Rend la couleur de texte invisible */
+  text-decoration: none;
+}
+
+/* Ajout d'un sélecteur pour cibler spécifiquement l'image à l'intérieur du nom */
+.nav-name img {
+    display: block; /*
+    width: 105px; /* Largeur souhaitée de la photo (ajustez au besoin) */
+    height: 105px; /* Hauteur souhaitée de la photo (doit idéalement être égale à la largeur pour un carré parfait) */
+    border-radius: 4px; 
+     margin-right: var(--space-s); //* Optionnel : adoucit les coins de l'image */
 }
 
 .nav-links {
@@ -83,6 +93,14 @@ nav .container {
 }
 
 .nav-links a:hover { color: var(--clr-bordeaux); }
+
+.styled-link {
+    text-decoration: none; /* Supprime le soulignement bleu/noir par défaut du lien */
+    color: #6B3A5E;        /* Définit une couleur attractive (ex: bleu) */
+    font-weight: bold;     /* Rend le texte plus visible et important */
+    display: inline-block; /* Permet de mieux gérer l'espacement interne */
+}
+
 
 /* ── Hero ────────────────────────────────────────────── */
 header {
@@ -112,7 +130,7 @@ header {
 
 h1 {
     font-family: var(--ff-display);
-    font-weight: 300;
+    font-weight: 500;
     font-size: clamp(2.4rem, 6vw, 3.8rem);
     line-height: 1.08;
     color: var(--clr-text);
@@ -182,6 +200,20 @@ h2 {
     color: var(--clr-text);
     margin-bottom: var(--space-m);
 }
+
+/* ============================================== */
+/* AJUSTEMENT DE MARGE POUR LES TITRES DE SECTION   */
+/* ============================================== */
+
+h2 {
+    margin-bottom: var(--space-s); /* Utilise l'espace S (0.8rem) défini dans vos tokens */
+}
+
+#travaux h2, 
+#publications h2 {
+    margin-top: var(--space-l); 
+}
+
 
 /* ── Recherche en cours ──────────────────────────────── */
 .thesis-card {
@@ -308,7 +340,7 @@ h2 {
 /* ── Compétences ─────────────────────────────────────── */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: var(--space-m);
 }
 
@@ -363,4 +395,60 @@ footer {
 
 @media (prefers-reduced-motion: reduce) {
     * { transition: none !important; }
+}
+
+/* ============================================== */
+/* SECTION RÉVISÉE : ENSEIGNEMENT (Format Pub)    */
+/* ============================================== */
+
+#teaching {
+    padding: var(--space-l) 0;
+    border-top: 1px solid var(--clr-rule);
+}
+
+/* Conteneur de chaque item d'enseignement, utilisant la grille comme les publications */
+.teaching-item {
+    display: grid;
+    grid-template-columns: 3.5rem 1fr; /* Colonne fixe pour l'année (3.5rem), colonne flexible pour le contenu (1fr) */
+    gap: 0 var(--space-m);
+    align-items: start;
+    margin-bottom: var(--space-m);
+}
+
+/* Le bloc qui contient les informations de date/année à gauche (remplace .tl-date ou .pub-year) */
+.te-date {
+    font-family: var(--ff-display);
+    font-size: 0.85rem; /* Réduire un peu la taille pour l'alignement */
+    color: var(--clr-bordeaux-light);
+    padding-top: 2px;
+    text-align: right; /* Garde l'alignement à droite dans sa propre colonne */
+}
+
+/* Le bloc principal de contenu (le côté droit) */
+.te-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Titre du cours, maintenant dans le flux normal */
+.te-title {
+    font-family: var(--ff-display);
+    font-weight: 400;
+    font-size: 1.15rem;
+    color: var(--clr-text);
+    margin-bottom: 0.3rem;
+}
+
+/* Détails (Niveau, Semestre) - Ajout d'un petit style pour l'information secondaire */
+.te-details {
+    font-size: 0.82rem;
+    color: var(--clr-muted);
+    margin-bottom: 0.5rem;
+}
+
+/* Description du cours (le paragraphe) */
+.te-description p {
+    line-height: 1.6;
+    font-size: 0.95rem;
 }

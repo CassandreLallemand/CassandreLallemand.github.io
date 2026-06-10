@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -15,9 +15,12 @@
   <!-- ── Navigation ── -->
   <nav>
     <div class="container">
-      <a href="#" class="nav-name">Cassandre Lallemand</a>
+     <a class="nav-name" href="#">
+    <img src="image/profil.png" alt="Photo de Cassandre Lallemand">
+</a>
       <ul class="nav-links">
         <li><a href="#recherche">Recherche</a></li>
+        <li><a href="#teaching">Enseignement</a></li>
         <li><a href="#publications">Publications</a></li>
         <li><a href="#parcours">Parcours</a></li>
         <li><a href="#competences">Compétences</a></li>
@@ -40,10 +43,10 @@
             Doctorante en sociologie à l'École doctorale de Saint-Étienne, dans le cadre du projet ANR <em>BECLAP</em> (Beauté, classe et pouvoir). Mes travaux portent sur la co-construction des sociabilités et des trajectoires esthétiques, à l'intersection des rapports de classe, de genre et des cultures numériques.
           </p>
           <div class="hero-contact">
-            <span>cassandre.melusine@orange.fr</span>
-            <span>·</span>
-            <a href="mailto:cassandre.melusine@orange.fr">Écrire</a>
+           <a href="mailto:votre.email@exemple.com">Email</a>
+            <a href="https://www.linkedin.com/in/cassandre-lallemand-25590733a" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </div>
+
         </div>
       </div>
     </div>
@@ -77,6 +80,29 @@
     </div>
   </section>
 
+  <!-- NOUVELLE SECTION : ENSEIGNEMENT               -->
+  <section id="teaching">
+    <div class="container">
+      <p class="section-eyebrow">Formations & Pédagogie</p>
+      <h2>Enseignement</h2>
+
+      <!-- ARTICLE 1 : Social Media — École Supérieure de Design Villefontaine (38) -->
+      <div class="teaching-item">
+        <div class="te-date">2025-2026</div>
+        <div class="te-body">
+            <span class="te-title">Social Media — École Supérieure de Design Villefontaine (38)</span>
+            <div class="te-details">
+                <strong>Niveau :</strong> DSAA 1ère année
+            </div>
+            <div class="te-description">
+                <p>Ce cours explore les grandes mutations des sociétés occidentales (mondialisation, numérique, crises écologiques) en mobilisant un cadre théorique sociologique solide. Aborde la transition du modèle industriel au post-industriel.</p>
+            </div>
+        </div>
+      </div>
+
+    </div >
+  </section>
+
   <!-- ── Publications ── -->
   <section id="publications">
     <div class="container">
@@ -87,17 +113,35 @@
 
         <!-- Article à paraître — à compléter -->
         <li class="pub-item">
-          <span class="pub-year">2025</span>
+          <span class="pub-year">2026</span>
           <div class="pub-body">
-            <p class="pub-title">Titre de l'article co-écrit — à renseigner</p>
+            <p class="pub-title">« T’as pas la ref » : Le capital culturel numérique, entre cryptage générationnel et réappropriation de la forme scolaire dans la socialisation juvénile.</p>
             <p class="pub-meta">
               Article en cours de soumission ·
-              <em>Revue à préciser</em>
+              <em>Inter Pares</em>
             </p>
           </div>
         </li>
 
-        <!-- Mémoires de master -->
+        <li class="pub-item">
+          <span class="pub-year">2026</span>
+          <div class="pub-body">
+            <p class="pub-title">A la recherche du CAQDAS optimal : comment choisir le bon outil d’aide à l’analyse qualitative ?
+              <a href="https://vico.hypotheses.org/2273" class="styled-link">&#10532;</a>
+            </p>
+            
+            <p class="pub-meta">
+              Article en cours de soumission ·
+              <em>Carnet Hypothèses — La vie après la crise sanitaire</em>
+            </p>
+          </div>
+        </li>
+
+      </ul>
+
+      <h2>Travaux</h2>
+             <ul class="pub-list">
+      <!-- Mémoires de master -->
         <li class="pub-item">
           <span class="pub-year">2025</span>
           <div class="pub-body">
@@ -117,6 +161,7 @@
             <p class="pub-meta">Mémoire de Master 1 · Université Grenoble Alpes · dir. Pierre Mercklé · 17/20</p>
           </div>
         </li>
+
 
       </ul>
     </div>
@@ -204,8 +249,8 @@
         <div class="skill-group">
           <h3>Langues</h3>
           <ul>
-            <li>Français — langue maternelle</li>
-            <li>Anglais — TOEFL 87/120</li>
+            <li>Français natif</li>
+            <li>Anglais — TOEFL 87/120 (2023)</li>
           </ul>
         </div>
       </div>
