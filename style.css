@@ -574,3 +574,24 @@ p {
     hyphens: auto; /* Active les coupures de mots automatiques */
     -webkit-hyphens: auto; /* Pour la compatibilité avec Safari/Chrome */
 }
+
+.btn-download {
+    display: inline-block;
+    margin-top: var(--space-m);
+    padding: 0.4rem 1rem; /* Espacement intérieur réduit */
+    background-color: var(--clr-bordeaux);
+    color: #FAF7F2 !important;
+    font-family: var(--ff-body);
+    font-size: 0.7rem; /* Taille du texte légèrement diminuée */
+    letter-spacing: 0.05em; /* Lettres un peu plus rapprochées */
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+ 
+.btn-download:hover {
+    background-color: var(--clr-bordeaux-light);
+    color: #FAF7F2 !important;
+    text-decoration: none;
+}
