@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV — Cassandre Lallemand</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Source+Serif+4:wght@300;400&display=swap" rel="stylesheet" />
+  
+  <style>
+    /* Configuration spécifique pour l'impression A4 */
+    @page {
+      size: A4;
+      margin: 0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-weight: 300;
+      font-size: 10.5pt;
+      line-height: 1.5;
+      color: #2A2020;
+      background: #FAF7F2;
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      display: flex;
+    }
+    
+    /* Colonne latérale (gauche) */
+    .sidebar {
+      width: 35%;
+      background: #EDE5D8;
+      padding: 15mm 10mm;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      border-right: 1px solid #C8B4C0;
+    }
+    
+    /* Colonne principale (droite) */
+    .main {
+      width: 65%;
+      padding: 15mm 15mm;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    
+    .photo {
+      width: 100%;
+      aspect-ratio: 1;
+      border-radius: 4px;
+      object-fit: cover;
+      margin-bottom: 5px;
+    }
+    
+    h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 26pt;
+      font-weight: 500;
+      line-height: 1.1;
+      color: #2A2020;
+      margin-bottom: 5px;
+    }
+    h1 em {
+      color: #6B3A5E;
+      font-style: italic;
+    }
+    
+    .job-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 11pt;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #9B6090;
+      margin-bottom: 10px;
+    }
+    
+    h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 16pt;
+      font-weight: 500;
+      color: #6B3A5E;
+      border-bottom: 1px solid #C8B4C0;
+      padding-bottom: 3px;
+      margin-bottom: 12px;
+    }
+    
+    .section-group { margin-bottom: 12px; }
+    
+    h3 {
+      font-size: 11pt;
+      font-weight: 600;
+      color: #2A2020;
+    }
+    
+    .meta {
+      font-size: 9pt;
+      color: #6B3A5E;
+      margin-bottom: 4px;
+      font-style: italic;
+    }
+    
+    .desc {
+      font-size: 10pt;
+      color: #6E5C5C;
+      text-align: justify;
+    }
+    
+    .contact-item, .skill-item {
+      font-size: 10pt;
+      margin-bottom: 4px;
+      color: #2A2020;
+    }
+    
+    .contact-item strong {
+      display: block;
+      font-size: 8pt;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #9B6090;
+      margin-top: 10px;
+    }
+    
+    ul { padding-left: 15px; color: #6E5C5C; }
+    li { margin-bottom: 3px; font-size: 10pt; }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+    <img src="../image/profil.png" alt="Photo de Cassandre Lallemand" class="photo">
+    
+    <div style="margin-top: 10px;">
+      <h2 style="font-size: 14pt; margin-bottom: 8px;">Contact</h2>
+      <div class="contact-item">
+        <strong>Email</strong>
+        cassandre.melusine@orange.fr 
+      </div>
+      <div class="contact-item">
+        <strong>Téléphone</strong>
+        06 78 13 15 94 
+      </div>
+      <div class="contact-item">
+        <strong>LinkedIn</strong>
+        linkedin.com/in/cassandre-lallemand
+      </div>
+    </div>
+
+    <div>
+      <h2 style="font-size: 14pt; margin-bottom: 8px;">Outils & Langues</h2>
+      <div class="contact-item">
+        <strong>Méthodes</strong>
+        Entretiens, Focus group, Méthodes mixtes, Ethnographie, Analyse de réseaux sociaux, Anonymisation.
+      </div>
+      <div class="contact-item">
+        <strong>Statistiques & Enquête</strong>
+        R, Excel, LimeSurvey, Sphinx
+      </div>
+      <div class="contact-item">
+        <strong>Analyse qualitative</strong>
+        Qualcoder, Taguette, LibreQDA, Sonal, Buzz
+      </div>
+      <div class="contact-item">
+        <strong>Langues</strong>
+        Anglais (TOEFL 87/120), Français (natif)
+      </div>
+    </div>
+
+    <div>
+      <h2 style="font-size: 14pt; margin-bottom: 8px;">Centres d'intérêt</h2>
+      <div class="contact-item" style="color: #6E5C5C; text-align: justify; font-size: 9.5pt;">
+        Pratique du chant lyrique en Conservatoire et du violon en orchestre, ouverture culturelle grâce à des voyages à l'étranger.
+      </div>
+    </div>
+  </div>
+
+  <div class="main">
+    
+    <div>
+      <h1>Cassandre <em>Lallemand</em> </h1>
+      <div class="job-title">Sociologue — Doctorante</div>
+      <p class="desc">
+        Mes travaux portent sur la co-construction des sociabilités et des trajectoires esthétiques, à l'intersection des rapports de classe, de genre et des cultures numériques.
+      </p>
+    </div>
+
+    <div>
+      <h2>Expériences Professionnelles & Recherche</h2>
+      
+      <div class="section-group">
+        <h3>Doctorante en sociologie</h3>
+        <div class="meta">2026 – Présent | École doctorale de Saint-Étienne</div>
+        <p class="desc">
+          Contrat doctoral au sein du projet ANR BECLAP. Thèse portant sur les trajectoires esthétiques d'étudiant·es en formations supérieures courtes, co-dirigée par Camille Couvry et Christine Détrez.
+        </p>
+      </div>
+
+      <div class="section-group">
+        <h3>Enseignement — Social Media</h3>
+        <div class="meta">2025 – 2026 | École Supérieure de Design Villefontaine</div>
+        <p class="desc">
+          Cours dispensé en anglais (18h) pour des étudiant·es en DSAA 1ère année. Introduction aux concepts de la sociologie du numérique, aux sociabilités en ligne et aux enjeux de visibilité.
+        </p>
+      </div>
+
+      <div class="section-group">
+        <h3>Stage de recherche — Projet ANR PanelVico</h3>
+        <div class="meta">2025 – 2026 | Laboratoire Pacte (UMR 5194)</div>
+        <p class="desc">
+          Enquête longitudinale en méthodes mixtes supervisée par Laurine Thizy et Pierre Mercklé. Passation d'entretiens, pseudonymisation des données qualitatives, rédaction d'articles scientifiques.
+        </p>
+      </div>
+
+      <div class="section-group">
+        <h3>Stage de recherche — Étude sur l'intimité</h3>
+        <div class="meta">2025 (6 mois) | Laboratoire LaRAC</div>
+        <p class="desc">
+          Étude sur l'intimité et les relations adolescentes en milieu scolaire supervisée par Margot Déage. Animation de focus groups naturels, création de dispositifs numériques interactifs et analyse qualitative.
+        </p>
+      </div>
+      
+<div style="margin-top: 30px;">
+      <h2>Formation</h2>
+      
+      <div class="section-group">
+        <h3>Master Sociologie parcours SCEN</h3>
+        <div class="meta">2023 – 2026 | Université Grenoble Alpes</div>
+        <p class="desc">
+          Sociétés contemporaines à l'ère numérique. Obtention avec 17/20 au mémoire de M1 (« T'as la ref ? ») et 17/20 au mémoire de M2 (« Ma ref, ta ref, nos refs »).
+        </p>
+      </div>
+
+      <div class="section-group">
+        <h3>CPGE B/L (Lettres et Sciences sociales)</h3>
+        <div class="meta">2020 – 2023 | Lycée Carnot, Dijon</div>
+        <p class="desc">Spécialité anglais.</p>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
