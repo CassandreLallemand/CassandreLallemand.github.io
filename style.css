@@ -496,6 +496,11 @@ footer {
         display: block;
         border-radius: 4px;
     }
+
+        .header-logo .logo-cmw {
+        max-width: 250px;
+        margin-bottom: -0.6rem; /* à ajuster */
+    }
 }
 
 /* Version mobile */
@@ -594,4 +599,36 @@ p {
     background-color: var(--clr-bordeaux-light);
     color: #FAF7F2 !important;
     text-decoration: none;
+}
+
+/* ── Programme d'événement (PDF) ─────────────────────── */
+.programme-embed {
+    margin-top: var(--space-m);
+    border: 1px solid var(--clr-rule);
+    background: var(--clr-beige);
+    padding: var(--space-s);
+    border-radius: 4px;
+}
+
+.programme-embed object {
+    display: block;
+    width: 100%;
+    height: 720px;
+    border: 0;
+}
+
+@media (max-width: 767px) {
+    .programme-embed { display: none; }
+}
+
+/* Programme replié : resserre l'espace avec la section suivante */
+#programme {
+    padding-bottom: 0;
+}
+
+/* Bouton CV (index) : version réduite */
+#contact .btn-download {
+    padding: 0.25rem 0.7rem;
+    font-size: 0.6rem;
+    letter-spacing: 0.04em;
 }
